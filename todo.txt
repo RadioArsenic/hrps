@@ -1,0 +1,21 @@
+rock paper scissor variants:
+- zombie, spider, knife
+  knife > spider
+  zombie > knife
+  spider > zombie
+- pumpkin, leaf, knife
+  more obvious
+- pumpkin, zombie, knife
+  knife > pumpkin
+  pumpkin > zombie
+  zombie > knife
+- pumpkin, zombie, spider
+  zombie > pumpkin
+  pumpkin > spider
+  spider > zombie
+
+
+secret OP option: ghost (kinda like tnt, makes players confused)
+
+make heading bigger
+fix circle issue (turns to ovals on smaller screens, stretches sideways)
