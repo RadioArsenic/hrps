@@ -1,3 +1,9 @@
+@keyframes border-blinker {
+  50% {
+    border-color: rgb(0, 0, 255);
+  }
+}
+
 body {
     background: black url(halloween-rps-bg.png) no-repeat;
     background-size: cover;
@@ -28,4 +34,28 @@ div, div i {
     margin: 20px;
     text-align: center;
     padding: 10px;
+}
+
+
+.modal-content {
+/*   border-style: groove;  */
+	border-style: solid;
+  border-width: 5px;
+  border-color: rgb(108, 2, 253);
+  transition-duration: 0.5s;
+  animation: border-blinker 1s linear infinite;
+}
+
+.modal-header {
+  background-color: #00ff40;
+  position: relative;
+  padding: 10%;
+}
+
+.modal-title {
+  position: absolute;
+}
+
+.modal-body {
+  padding: 5%;
 }

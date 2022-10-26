@@ -19,3 +19,7 @@ secret OP option: ghost (kinda like tnt, makes players confused)
 
 make heading bigger
 fix circle issue (turns to ovals on smaller screens, stretches sideways)
+
+add the social media share buttons back in
+
+fix the ghost mode- may have to bubble it
