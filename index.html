@@ -22,18 +22,18 @@
 </head>
 
 <body>
-	<div class="container-fluid" style="min-height: 100vh">
+	<div class="container-fluid" id="gameArea" style="min-height: 100vh">
 		<h1 class="position-absolute start-50 translate-middle-x">Take your pick!</h1>
 
 		<div class="row position-absolute top-50 start-50 translate-middle">
-			<div class="col-sm circle" onclick="picked(1)">
-				<i class="fa fa-hand-rock-o" style="font-size:48px"></i>
+			<div class="col-sm circle" id="1">
+				<i class="fa fa-hand-rock-o" style="font-size:48px" id="A"></i>
 			</div>
-			<div class="col-sm circle" onclick="picked(2)">
-				<i class="fa fa-hand-paper-o" style="font-size:48px"></i>
+			<div class="col-sm circle" id="2">
+				<i class="fa fa-hand-paper-o" style="font-size:48px" id="B"></i>
 			</div>
-			<div class="col-sm circle" onclick="picked(3)">
-				<i class="fa fa-hand-scissors-o" style="font-size:48px"></i>
+			<div class="col-sm circle" id="3">
+				<i class="fa fa-hand-scissors-o" style="font-size:48px" id="C"></i>
 			</div>
 		</div>
 	</div>

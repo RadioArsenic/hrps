@@ -6,8 +6,25 @@
 //scissors > paper      3 > 2
 //paper > rock          2 > 1
 
-function picked(uchoice) {
-	comparison(uchoice, randomNumberGenerator());
+function onClick(event) {
+	let target = event.target.id[0];
+	switch (target) {
+		case "1":
+		case "A":
+			comparison(1, randomNumberGenerator());
+			break;
+		case "2":
+		case "B":
+			comparison(2, randomNumberGenerator());
+			break;
+		case "3":
+		case "C":
+			comparison(3, randomNumberGenerator());
+			break;
+		default:
+			result(2);
+			break;
+	}
 }
 
 function randomNumberGenerator() {
@@ -53,17 +70,6 @@ function comparison(uchoice, gchoice) {
 	}
 }
 
-function ghost() {
-	//if click elsewhere on screen
-	//then register as choosing ghost
-	//auto win
-	// console.log("ghost");
-
-	//check if other option was given. If no other then ghost,
-	//   if other then that
-	result(2);
-}
-
 function result(reslt) {
 	//if 1 then win
 	//if 0 then tie
@@ -74,6 +80,9 @@ function result(reslt) {
 	switch (reslt) {
 		case 1:
 			reslt = "won! :)";
+			break;
+		case 2:
+			reslt = "won via ghost :)";
 			break;
 		case 0:
 			reslt = "tied! :)";
@@ -92,3 +101,11 @@ function result(reslt) {
 	$("#congrats").html(con);
 	$("#result").html(reslt);
 }
+
+function main() {
+	document
+	.getElementById("gameArea")
+	.addEventListener("click", onClick);
+}
+
+main();

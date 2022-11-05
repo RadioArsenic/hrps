@@ -16,10 +16,14 @@ rock paper scissor variants:
 
 
 secret OP option: ghost (kinda like tnt, makes players confused)
+ghosts for dynamite, hidden button
+nothing affects it and its generally useless
+and causes arguments between players about
+what should and shouldn't be allowed
 
 make heading bigger
 fix circle issue (turns to ovals on smaller screens, stretches sideways)
 
 add the social media share buttons back in
 
-fix the ghost mode- may have to bubble it
+add confetti if win
