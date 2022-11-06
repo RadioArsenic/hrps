@@ -4,6 +4,15 @@
   }
 }
 
+/* Attempts at making the circles stack on smaller screens.
+   I think the best option would be to bring back the bootstrap columns
+   but then the circles turn into ovals again */
+@media only screen and (max-width: 600px) {
+    .circle {
+      flex-direction: column;
+    }
+}
+
 body {
     background: black url("resources/halloween-rps-bg.png") no-repeat;
     background-size: cover;

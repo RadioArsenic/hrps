@@ -14,17 +14,21 @@ function onClick(event) {
 		case "1":
 		case "A":
 			comparison(1, randomNumberGenerator());
+			result();
 			break;
 		case "2":
 		case "B":
 			comparison(2, randomNumberGenerator());
+			result();
 			break;
 		case "3":
 		case "C":
 			comparison(3, randomNumberGenerator());
+			result();
 			break;
 		default:
-			result(2);
+			reslt = 2;
+			result();
 			break;
 	}
 }
@@ -38,46 +42,45 @@ function comparison(uchoice, gchoice) {
 	console.log("you: " + uchoice + " game: " + gchoice);
 	if (uchoice == gchoice) {
 		//tie 0
-		result(0);
+		reslt = 0;
 	}
 	else if (uchoice == 1) {
 		if (gchoice == 2) {
 			//lose -1
-			result(-1);
+			reslt = -1;
 		}
 		else {
 			//win 1
-			result(1);
+			reslt = 1;
 		}
 	}
 	else if (uchoice == 2) {
 		if (gchoice == 3) {
 			//lose -1
-			result(-1);
+			reslt = -1;
 		}
 		else {
 			//win 1
-			result(1);
+			reslt = 1;
 		}
 	}
 	else if (uchoice == 3) {
 		if (gchoice == 1) {
 			//lose -1
-			result(-1);
+			reslt = -1;
 		}
 		else {
 			//win 1
-			result(1);
+			reslt = 1;
 		}
 	}
 }
 
-function result(res) {
+function result() {
 	//if 1 then win
 	//if 0 then tie
 	//if -1 then lose
 	//if 2 then ghost/win
-	reslt = res;
 	var con = "Congratulations!"
 	var color = "#00ff40";
 	switch (reslt) {
@@ -120,7 +123,7 @@ function share() {
 
 	$("#shareToEmail").on("click", function () {
 	let myWindow = window.open(`mailto:?subject=
-		Check out this game!&body=I${reslt} Can you do better?%0D%0A
+		Check out this game!&body=I ${reslt} Can you do better?%0D%0A
 		Check it out here: https://github.com/RadioArsenic/hrps`);
 	myWindow.close();
 	});
