@@ -6,6 +6,8 @@
 //scissors > paper      3 > 2
 //paper > rock          2 > 1
 
+let reslt = 0;
+
 function onClick(event) {
 	let target = event.target.id[0];
 	switch (target) {
@@ -70,11 +72,12 @@ function comparison(uchoice, gchoice) {
 	}
 }
 
-function result(reslt) {
+function result(res) {
 	//if 1 then win
 	//if 0 then tie
 	//if -1 then lose
 	//if 2 then ghost/win
+	reslt = res;
 	var con = "Congratulations!"
 	var color = "#00ff40";
 	switch (reslt) {
@@ -102,7 +105,30 @@ function result(reslt) {
 	$("#result").html(reslt);
 }
 
+function share() {
+	$("#shareToFB").on("click", function () {
+	window.open(`https://www.facebook.com/sharer/sharer.php?u=
+		https://github.com/RadioArsenic/hrps
+		&quote=I+${reslt}+Can+you+do+better%3f`);
+	});
+
+	$("#shareToTwitter").on("click", function () {
+	window.open(`https://twitter.com/share?url=
+		https://github.com/RadioArsenic/hrps
+		&text=I+${reslt}+Can+you+do+better%3f`);
+	});
+
+	$("#shareToEmail").on("click", function () {
+	let myWindow = window.open(`mailto:?subject=
+		Check out this game!&body=I${reslt} Can you do better?%0D%0A
+		Check it out here: https://github.com/RadioArsenic/hrps`);
+	myWindow.close();
+	});
+}
+
 function main() {
+	share();
+
 	document
 	.getElementById("gameArea")
 	.addEventListener("click", onClick);

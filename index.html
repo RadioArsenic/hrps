@@ -23,18 +23,18 @@
 
 <body>
 	<div class="container-fluid" id="gameArea" style="min-height: 100vh">
-		<h1 class="position-absolute start-50 translate-middle-x">Take your pick!</h1>
+		<h1 class="position-absolute start-50 translate-middle-x" style="font-size: 7vw;">Take your pick!</h1>
 
-		<div class="row position-absolute top-50 start-50 translate-middle">
-			<div class="col-sm circle" id="1">
-				<i class="fa fa-hand-rock-o" style="font-size:48px" id="A"></i>
-			</div>
-			<div class="col-sm circle" id="2">
-				<i class="fa fa-hand-paper-o" style="font-size:48px" id="B"></i>
-			</div>
-			<div class="col-sm circle" id="3">
-				<i class="fa fa-hand-scissors-o" style="font-size:48px" id="C"></i>
-			</div>
+		<div class="con w-75 position-absolute top-50 start-50 translate-middle">
+			<span class="circle" id="1">
+				<i class="circle-txt translate-middle-y translate-middle-x fa fa-hand-rock-o" id="A"></i>
+			</span>
+			<span class="circle" id="2">
+				<i class="circle-txt translate-middle-y translate-middle-x fa fa-hand-paper-o" id="B"></i>
+			</span>
+			<span class="circle" id="3">
+				<i class="circle-txt translate-middle-y translate-middle-x fa fa-hand-scissors-o" id="C"></i>
+			</span>
 		</div>
 	</div>
 
@@ -50,6 +50,9 @@
 						<p class="fs-4 ">
 							You <span id="result" />
 						</p>
+						<button type="button" class="share btn fa fa-twitter" id="shareToTwitter"></button>
+						<button type="button" class="share btn fa fa-facebook" id="shareToFB"></button>
+						<button type="button" class="share btn fa fa-envelope" id="shareToEmail"></button>
 					</div>
 				</div>
 			</div>

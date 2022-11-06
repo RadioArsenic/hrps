@@ -5,7 +5,7 @@
 }
 
 body {
-    background: black url(halloween-rps-bg.png) no-repeat;
+    background: black url("resources/halloween-rps-bg.png") no-repeat;
     background-size: cover;
     text-align: center;
 }
@@ -14,7 +14,6 @@ h1 {
     font-family: Spooky-Font;
     color: rgb(226, 93, 4);
     padding-top: 5%;
-    font-size: 50px;
 }
 
 div, div i {
@@ -23,17 +22,37 @@ div, div i {
 
 @font-face {
     font-family: 'Spooky-Font';
-    src: url("SomethingStrange-vjYD.ttf");
+    src: url("resources/SomethingStrange-vjYD.ttf");
 }
 
 .circle {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: rgb(12, 9, 26);
-    margin: 20px;
-    text-align: center;
-    padding: 10px;
+  width: 18%;
+  border-radius: 50%;
+  background-color: rgb(12, 9, 26);
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  font-size: 5vw;
+}
+
+.con {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.circle::after {
+  content: "";
+  display: inline-block;
+  padding-bottom: 100%;
+}
+
+.circle-txt {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
+  font-size: 100%;
 }
 
 
@@ -58,4 +77,29 @@ div, div i {
 
 .modal-body {
   padding: 5%;
+}
+
+.share {
+  padding: 15px;
+  font-size: 50px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+  background-color: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.fa-envelope {
+  background-color: #555;
+  color: white;
 }

@@ -26,4 +26,6 @@ fix circle issue (turns to ovals on smaller screens, stretches sideways)
 
 add the social media share buttons back in
 
+make modal border bigger
+
 add confetti if win
