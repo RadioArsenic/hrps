@@ -21,11 +21,6 @@ nothing affects it and its generally useless
 and causes arguments between players about
 what should and shouldn't be allowed
 
-make heading bigger
-fix circle issue (turns to ovals on smaller screens, stretches sideways)
-
-add the social media share buttons back in
-
-make modal border bigger
-
-add confetti if win
+make more responsive
+  circles should stack
+  title should stack
